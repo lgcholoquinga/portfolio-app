@@ -1,8 +1,8 @@
 @import "../../../styles/settings";
 
 .menu {
-  background-color: $dark-grey;
-  height: 75px;
+  background-color: $primary;
+  height: 65px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@
 
 .menu_items li {
   border-radius: 3px;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .menu_items li a {

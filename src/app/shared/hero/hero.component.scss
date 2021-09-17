@@ -1,0 +1,113 @@
+@import "../../../styles/settings";
+.hero__main {
+  width: 100vw;
+  background-color: $light-grey;
+  height: calc(100vh - 65px);
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: darken($color: white, $amount: 20);
+}
+
+.hero__socialNetwork {
+  padding: 10px;
+
+  a {
+    color: darken($color: white, $amount: 20);
+    padding: 25px;
+    font-size: 40px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.hero__image-content {
+  height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__avatar {
+  border: 2px solid white;
+  width: 55%;
+  height: 300px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  cursor: context-menu;
+}
+
+.hero__child {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.hero__greeting {
+  font-size: 50px;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.hero__position {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  &:hover {
+    color: white;
+  }
+}
+
+.hero__name {
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.hero__firstLetter {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: white;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__image-content {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero__greeting {
+    font-size: 33px;
+  }
+
+  .hero__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
