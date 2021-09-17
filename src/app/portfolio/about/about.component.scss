@@ -1,5 +1,59 @@
+@import "../../../styles/settings";
 .about__container {
   width: 100%;
-  height: 400px;
-  background-color: red;
+}
+
+.about__section-left {
+  padding: 20px;
+  text-align: right;
+  img {
+    width: 90%;
+  }
+}
+
+.about__section-right {
+  padding: 20px;
+  border-left: 1px solid $primary;
+
+  p {
+    color: $light-grey;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 500;
+  }
+}
+
+.about__actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: 0;
+    color: $primary;
+  }
+
+  div {
+    text-align: center;
+
+    p {
+      color: darken($color: white, $amount: 40);
+    }
+  }
+}
+
+.btn__cv {
+  background-color: $primary;
+  color: white;
+  padding: 10px;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: $primary, $amount: 15);
+  }
+
+  i {
+    margin-right: 3px;
+  }
 }
