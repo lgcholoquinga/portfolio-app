@@ -5,10 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { PortfolioModule } from './portfolio/portfolio.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, SharedModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    SharedModule,
+    PortfolioModule,
+    RouterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
