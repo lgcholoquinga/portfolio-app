@@ -1,0 +1,31 @@
+<div class="row mt-4">
+  <div class="col-md-4 mb-2" *ngFor="let qualification of qualifications">
+    <div class="qualification__card">
+      <div class="qualification__card--icon">
+        <span>
+          <i class="fas fa-book"></i>
+        </span>
+      </div>
+      <div class="qualification__card--content">
+        <h3>{{ qualification.title }}</h3>
+        <h4>{{ qualification.subtitle }}</h4>
+        <ng-container
+          *ngIf="qualification.init_year !== qualification.finish_year"
+        >
+          <p>
+            <i class="fas fa-calendar"></i> {{ qualification.init_year }} -
+            {{ qualification.finish_year }}
+          </p>
+        </ng-container>
+        <ng-container
+          *ngIf="qualification.init_year === qualification.finish_year"
+        >
+          <p><i class="fas fa-calendar"></i> {{ qualification.init_year }}</p>
+        </ng-container>
+        <ng-container *ngIf="qualification.url">
+          <a [href]="qualification.url" target="_blank"> See Certificate</a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

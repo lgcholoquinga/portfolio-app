@@ -6,6 +6,8 @@ import { SkillCardComponent } from './components/skill-card/skill-card.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SkillContentComponent } from './components/skill-content/skill-content.component';
 import { AboutComponent } from './about/about.component';
+import { QualificationComponent } from './qualification/qualification.component';
+import { QualificationCardComponent } from './components/qualification-card/qualification-card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { AboutComponent } from './about/about.component';
     SkillCardComponent,
     SkillContentComponent,
     AboutComponent,
+    QualificationComponent,
+    QualificationCardComponent,
   ],
   imports: [CommonModule, NgbModule],
   exports: [
@@ -21,6 +25,7 @@ import { AboutComponent } from './about/about.component';
     SkillCardComponent,
     SkillContentComponent,
     AboutComponent,
+    QualificationComponent,
   ],
 })
 export class PortfolioModule {}
