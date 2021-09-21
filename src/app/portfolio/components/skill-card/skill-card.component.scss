@@ -1,0 +1,54 @@
+@import "../../../../styles/settings";
+
+.skills__card {
+  width: 280px;
+  display: grid;
+  grid-template-columns: 50px 200px 30px;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+}
+
+.skills__icon {
+  grid-column: 1/2;
+  padding: 5px;
+  font-size: 35px;
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__content {
+  grid-column: 2/3;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 0;
+    color: $primary;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: darken($color: white, $amount: 50);
+  }
+}
+
+.skills__option {
+  grid-column: 3/-1;
+  padding: 5px;
+  color: $primary;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: lighten($color: $primary, $amount: 20);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="skills__card">
+  <div class="skills__icon">
+    <span>
+      <i class="{{ skillInfo.icon }}"></i>
+    </span>
+  </div>
+  <div class="skills__content">
+    <h4>{{ skillInfo.title }}</h4>
+    <p>{{ skillInfo.experience }}</p>
+  </div>
+  <div class="skills__option" (click)="onClick()">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</div>

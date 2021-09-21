@@ -1,0 +1,14 @@
+<div id="contact" class="container mt-5 mb-3">
+  <h3 class="section__title">Contact Me</h3>
+  <p class="section__subtitle">Get in touch.</p>
+  <div class="row">
+    <div class="col-md-6 contact__container--left">
+      <div *ngFor="let contact of contacts">
+        <app-contact-info [contact]="contact"></app-contact-info>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-contact-form></app-contact-form>
+    </div>
+  </div>
+</div>

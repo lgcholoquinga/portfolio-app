@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let project of projects">
+    <div class="card">
+      <img class="card-img-top" [src]="project.image" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">
+          {{ project.description }}
+        </p>
+        <hr />
+        <div class="card-content">
+          <h5 class="card-title">Skills Developed</h5>
+          <p>{{ project.skill }}</p>
+        </div>
+        <hr />
+        <ng-container *ngIf="project.url">
+          <a [href]="project.url" target="_blank">See Project</a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

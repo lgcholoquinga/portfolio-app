@@ -1,0 +1,23 @@
+@import "../styles/settings";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.section__title {
+  text-align: center;
+  color: $primary;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.section__subtitle {
+  text-align: center;
+  color: darken($color: white, $amount: 40);
+}
