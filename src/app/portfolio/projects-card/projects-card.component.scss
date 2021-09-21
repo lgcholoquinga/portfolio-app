@@ -1,0 +1,41 @@
+@import "../../../styles/settings";
+
+.card-title {
+  color: $primary;
+}
+
+.card-text {
+  color: $light-grey;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card-content {
+  h5 {
+    color: $primary;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: darken($color: white, $amount: 50);
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  margin: 4px 0;
+}

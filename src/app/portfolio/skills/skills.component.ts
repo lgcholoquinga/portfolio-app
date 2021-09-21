@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardSkill, SkillDTO } from '../interfaces/skill';
+import { SkillService } from '../services/skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -30,65 +31,26 @@ export class SkillsComponent implements OnInit {
       action: 'database',
     },
   ];
-  public skillsFrontend: SkillDTO[] = [
-    {
-      title: 'React',
-      percentage: 85,
-    },
-    {
-      title: 'Angular',
-      percentage: 85,
-    },
-    {
-      title: 'Blazor',
-      percentage: 85,
-    },
-    {
-      title: 'JavaScrit',
-      percentage: 85,
-    },
-    {
-      title: 'Css',
-      percentage: 90,
-    },
-  ];
+  public skillsFrontend: SkillDTO[] = [];
 
-  public skillsBackend: SkillDTO[] = [
-    {
-      title: 'ASP.NET Core Web API',
-      percentage: 80,
-    },
-    {
-      title: 'ASP.NET Core Web App',
-      percentage: 80,
-    },
-    {
-      title: 'Node JS',
-      percentage: 60,
-    },
-  ];
+  public skillsBackend: SkillDTO[] = [];
 
-  public skillsDatabase: SkillDTO[] = [
-    {
-      title: 'Sql Server',
-      percentage: 80,
-    },
-    {
-      title: 'Msql',
-      percentage: 80,
-    },
-    {
-      title: 'Postgresql',
-      percentage: 75,
-    },
-    {
-      title: 'Firebase',
-      percentage: 60,
-    },
-  ];
-  constructor() {}
+  public skillsDatabase: SkillDTO[] = [];
+  constructor(private service: SkillService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.skills_frontend?.subscribe((skills) => {
+      this.skillsFrontend = skills;
+    });
+
+    this.service.skills_database?.subscribe((skills) => {
+      this.skillsDatabase = skills;
+    });
+
+    this.service.skills_backend?.subscribe((skills) => {
+      this.skillsBackend = skills;
+    });
+  }
 
   toggleFrontend(value: boolean) {
     this.isCollapsed = value;

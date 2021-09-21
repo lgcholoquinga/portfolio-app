@@ -7,23 +7,23 @@
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
           <li [ngbNavItem]="1">
             <a ngbNavLink>
-              <i class="fas fa-user-graduate"></i>
-              Education</a
-            >
-            <ng-template ngbNavContent>
-              <app-qualification-card
-                [qualifications]="educations"
-              ></app-qualification-card>
-            </ng-template>
-          </li>
-          <li [ngbNavItem]="2">
-            <a ngbNavLink>
               <i class="fas fa-briefcase"></i>
               Work</a
             >
             <ng-template ngbNavContent>
               <app-qualification-card
                 [qualifications]="works"
+              ></app-qualification-card>
+            </ng-template>
+          </li>
+          <li [ngbNavItem]="2">
+            <a ngbNavLink>
+              <i class="fas fa-user-graduate"></i>
+              Education</a
+            >
+            <ng-template ngbNavContent>
+              <app-qualification-card
+                [qualifications]="educations"
               ></app-qualification-card>
             </ng-template>
           </li>

@@ -8,6 +8,10 @@ import { SkillContentComponent } from './components/skill-content/skill-content.
 import { AboutComponent } from './about/about.component';
 import { QualificationComponent } from './qualification/qualification.component';
 import { QualificationCardComponent } from './components/qualification-card/qualification-card.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsCardComponent } from './projects-card/projects-card.component';
+import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { QualificationCardComponent } from './components/qualification-card/qual
     AboutComponent,
     QualificationComponent,
     QualificationCardComponent,
+    ProjectsComponent,
+    ProjectsCardComponent,
+    ContactInfoComponent,
+    ContactFormComponent,
   ],
   imports: [CommonModule, NgbModule],
   exports: [
@@ -26,6 +34,8 @@ import { QualificationCardComponent } from './components/qualification-card/qual
     SkillContentComponent,
     AboutComponent,
     QualificationComponent,
+    ProjectsComponent,
+    ContactComponent,
   ],
 })
 export class PortfolioModule {}

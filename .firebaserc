@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfolio-b21bc": {
+      "hosting": {
+        "portfolio-app": [
+          "portfolio-b21bc"
+        ]
+      }
+    }
+  }
+}
